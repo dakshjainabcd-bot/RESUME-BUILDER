@@ -1,0 +1,163 @@
+/* ============================================
+   Resume Form Styles
+   ============================================ */
+
+.resume-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-4) 0;
+}
+
+.form-header {
+  margin-bottom: var(--space-8);
+}
+
+.form-header h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.form-header p {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+/* Sections */
+.form-sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.form-section {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--duration-normal);
+  background: var(--bg-secondary);
+}
+
+.form-section.open {
+  border-color: var(--border-strong);
+}
+
+.form-section-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: background var(--duration-fast);
+}
+
+.form-section-header:hover {
+  background: var(--surface-glass);
+}
+
+.form-section-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.form-section-left svg {
+  color: var(--text-tertiary);
+}
+
+.form-section.open .form-section-left svg {
+  color: var(--accent-light);
+}
+
+.form-section-body {
+  padding: 0 var(--space-5) var(--space-5);
+  animation: fadeInDown var(--duration-normal) var(--ease-out);
+}
+
+/* Fields */
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.form-row {
+  display: flex;
+  gap: var(--space-4);
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+.form-row > .input-group {
+  flex: 1;
+}
+
+/* Entry cards (for repeatable sections) */
+.form-entry {
+  padding: var(--space-4);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.form-entry-compact {
+  padding: var(--space-3);
+}
+
+.form-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-entry-title {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* Bullets */
+.form-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bullet-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.bullet-marker {
+  color: var(--accent-light);
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+}
+
+.bullet-input {
+  flex: 1;
+}
+
+/* Actions */
+.form-actions {
+  margin-top: var(--space-8);
+  display: flex;
+  justify-content: flex-end;
+}

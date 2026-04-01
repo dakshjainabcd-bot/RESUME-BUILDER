@@ -1,0 +1,86 @@
+/* ============================================
+   App Layout Styles
+   ============================================ */
+
+/* Top Bar */
+.app-topbar {
+  background: rgba(10, 10, 11, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.app-topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-6);
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: var(--tracking-tight);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  transition: background var(--duration-fast);
+}
+
+.app-logo:hover {
+  background: var(--surface-glass);
+}
+
+.app-logo svg {
+  color: var(--accent-light);
+}
+
+.app-topbar-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* Content */
+.app-content {
+  padding: var(--space-4) var(--space-6);
+  flex: 1;
+}
+
+/* Preview Layout (Step 4) */
+.app-preview-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: var(--space-6);
+  align-items: start;
+  animation: fadeIn var(--duration-slow) var(--ease-out);
+}
+
+.app-preview-main {
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .app-preview-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .app-preview-sidebar {
+    order: -1;
+  }
+}
+
+/* Builder wrapper */
+.app-builder {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

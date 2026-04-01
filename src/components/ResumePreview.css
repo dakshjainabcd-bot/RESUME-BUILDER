@@ -1,0 +1,33 @@
+/* ============================================
+   Resume Preview Styles
+   ============================================ */
+
+.resume-preview-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.resume-preview-page {
+  width: 8.5in;
+  min-height: 11in;
+  background: white;
+  box-shadow: var(--shadow-xl);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .resume-preview-page {
+    width: 100%;
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-preview-page {
+    transform: scale(0.55);
+    transform-origin: top center;
+  }
+}

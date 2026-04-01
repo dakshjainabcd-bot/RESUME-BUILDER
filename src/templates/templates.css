@@ -1,0 +1,577 @@
+/* ============================================
+   Resume Templates — Print-Optimized Styles
+   ============================================ */
+
+/* Base template */
+.tpl {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #1a1a1a;
+  background: white;
+  min-height: 11in;
+  font-size: 10pt;
+  line-height: 1.45;
+}
+
+/* =====================
+   MODERN TEMPLATE
+   ===================== */
+.tpl-modern {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 11in;
+}
+
+.tpl-modern-sidebar {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 32px 24px;
+}
+
+.tpl-modern-name {
+  font-size: 18pt;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.tpl-modern-section {
+  margin-bottom: 20px;
+}
+
+.tpl-modern-section-title {
+  font-size: 8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.tpl-modern-contact-item {
+  font-size: 8.5pt;
+  color: #cbd5e1;
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.tpl-modern-skill-group {
+  margin-bottom: 10px;
+}
+
+.tpl-modern-skill-cat {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #93c5fd;
+  margin-bottom: 2px;
+}
+
+.tpl-modern-skill-items {
+  font-size: 8pt;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.tpl-modern-cert {
+  margin-bottom: 8px;
+}
+
+.tpl-modern-cert-name {
+  font-size: 8.5pt;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.tpl-modern-cert-meta {
+  font-size: 7.5pt;
+  color: #94a3b8;
+}
+
+/* Modern - Main */
+.tpl-modern-main {
+  padding: 32px 28px;
+}
+
+.tpl-modern-main-title {
+  font-size: 11pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1e293b;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.tpl-modern-summary {
+  font-size: 9.5pt;
+  color: #475569;
+  line-height: 1.55;
+  margin-bottom: 4px;
+}
+
+.tpl-modern-entry {
+  margin-bottom: 14px;
+}
+
+.tpl-modern-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.tpl-modern-entry-title {
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.tpl-modern-entry-company {
+  font-size: 9pt;
+  color: #64748b;
+}
+
+.tpl-modern-entry-date {
+  font-size: 8.5pt;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+.tpl-modern-entry-tech {
+  font-size: 8pt;
+  color: #3b82f6;
+  margin-bottom: 4px;
+}
+
+.tpl-modern-bullets {
+  padding-left: 16px;
+  margin: 4px 0 0;
+}
+
+.tpl-modern-bullets li {
+  font-size: 9pt;
+  color: #475569;
+  margin-bottom: 3px;
+  line-height: 1.45;
+}
+
+.tpl-modern-gpa {
+  font-size: 8.5pt;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.tpl-modern-details {
+  font-size: 9pt;
+  color: #64748b;
+  margin-top: 2px;
+  line-height: 1.45;
+}
+
+/* =====================
+   CLASSIC TEMPLATE
+   ===================== */
+.tpl-classic {
+  padding: 40px 48px;
+}
+
+.tpl-classic-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+.tpl-classic-name {
+  font-size: 22pt;
+  font-weight: 700;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.tpl-classic-contact {
+  font-size: 9pt;
+  color: #555;
+}
+
+.tpl-classic-section {
+  margin-bottom: 16px;
+}
+
+.tpl-classic-section-title {
+  font-size: 11pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1a1a1a;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.tpl-classic-entry {
+  margin-bottom: 12px;
+}
+
+.tpl-classic-entry-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 10pt;
+}
+
+.tpl-classic-date {
+  font-size: 9pt;
+  color: #777;
+  white-space: nowrap;
+}
+
+.tpl-classic-location {
+  font-size: 8.5pt;
+  color: #888;
+  font-style: italic;
+}
+
+.tpl-classic-text {
+  font-size: 9.5pt;
+  color: #444;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+.tpl-classic-tech {
+  font-size: 8.5pt;
+  color: #666;
+}
+
+.tpl-classic ul {
+  padding-left: 18px;
+  margin-top: 4px;
+}
+
+.tpl-classic li {
+  font-size: 9.5pt;
+  color: #444;
+  margin-bottom: 3px;
+  line-height: 1.45;
+}
+
+.tpl-classic-skills {
+  font-size: 9.5pt;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* =====================
+   MINIMAL TEMPLATE
+   ===================== */
+.tpl-minimal {
+  padding: 48px 52px;
+}
+
+.tpl-minimal-header {
+  margin-bottom: 24px;
+}
+
+.tpl-minimal-name {
+  font-size: 28pt;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.tpl-minimal-contact {
+  display: flex;
+  gap: 16px;
+  font-size: 9pt;
+  color: #666;
+}
+
+.tpl-minimal-links {
+  display: flex;
+  gap: 16px;
+  font-size: 8.5pt;
+  color: #888;
+  margin-top: 4px;
+}
+
+.tpl-minimal-section {
+  margin-bottom: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.tpl-minimal-summary {
+  font-size: 10pt;
+  color: #555;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.tpl-minimal-section-title {
+  font-size: 8pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.tpl-minimal-entry {
+  margin-bottom: 14px;
+}
+
+.tpl-minimal-entry-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.tpl-minimal-title {
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: #222;
+}
+
+.tpl-minimal-date {
+  font-size: 8.5pt;
+  color: #999;
+}
+
+.tpl-minimal-company {
+  font-size: 9pt;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.tpl-minimal ul {
+  padding-left: 14px;
+  margin-top: 4px;
+}
+
+.tpl-minimal li {
+  font-size: 9pt;
+  color: #555;
+  margin-bottom: 2px;
+  line-height: 1.5;
+}
+
+.tpl-minimal-desc {
+  font-size: 9pt;
+  color: #555;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.tpl-minimal-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tpl-minimal-skill-row {
+  font-size: 9pt;
+  display: flex;
+  gap: 8px;
+}
+
+.tpl-minimal-skill-cat {
+  font-weight: 600;
+  color: #444;
+  min-width: 100px;
+}
+
+.tpl-minimal-skill-items {
+  color: #666;
+}
+
+.tpl-minimal-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.tpl-minimal-small {
+  font-size: 8.5pt;
+  color: #666;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+/* =====================
+   CREATIVE TEMPLATE
+   ===================== */
+.tpl-creative-header {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed, #2563eb);
+  color: white;
+  padding: 36px 40px;
+}
+
+.tpl-creative-name {
+  font-size: 26pt;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.tpl-creative-contact {
+  font-size: 9pt;
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+.tpl-creative-summary {
+  font-size: 9.5pt;
+  opacity: 0.9;
+  line-height: 1.55;
+  max-width: 600px;
+}
+
+.tpl-creative-body {
+  padding: 28px 40px;
+}
+
+.tpl-creative-section {
+  margin-bottom: 20px;
+}
+
+.tpl-creative-section-title {
+  font-size: 10pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #4f46e5;
+  margin-bottom: 12px;
+}
+
+.tpl-creative-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tpl-creative-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #eef2ff;
+  color: #4338ca;
+  border-radius: 20px;
+  font-size: 8pt;
+  font-weight: 500;
+}
+
+.tpl-creative-entry {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+
+.tpl-creative-entry-left {
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.tpl-creative-entry-date {
+  font-size: 8.5pt;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.tpl-creative-entry-location {
+  font-size: 8pt;
+  color: #999;
+}
+
+.tpl-creative-entry-right {
+  flex: 1;
+}
+
+.tpl-creative-entry-title {
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.tpl-creative-entry-company {
+  font-size: 9pt;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.tpl-creative-entry-right ul {
+  padding-left: 14px;
+  margin-top: 4px;
+}
+
+.tpl-creative-entry-right li {
+  font-size: 9pt;
+  color: #555;
+  margin-bottom: 2px;
+  line-height: 1.45;
+}
+
+.tpl-creative-gpa {
+  font-size: 8.5pt;
+  color: #888;
+}
+
+.tpl-creative-tech {
+  font-size: 8pt;
+  color: #4f46e5;
+  margin-bottom: 4px;
+}
+
+.tpl-creative-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.tpl-creative-project-card {
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.tpl-creative-project-card p {
+  font-size: 8.5pt;
+  color: #555;
+  margin-top: 4px;
+  line-height: 1.45;
+}
+
+.tpl-creative-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.tpl-creative-small {
+  font-size: 8.5pt;
+  color: #666;
+  margin-bottom: 4px;
+  line-height: 1.45;
+}
+
+/* =====================
+   PRINT STYLES
+   ===================== */
+@media print {
+  .tpl {
+    box-shadow: none;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .tpl-modern {
+    break-inside: avoid;
+  }
+}
