@@ -1,45 +1,48 @@
 /* ============================================
-   Resume Form Styles
+   Resume Form Styles — v2 Premium Minimal
    ============================================ */
 
 .resume-form {
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: var(--space-4) 0;
+  padding: var(--space-2) 0;
 }
 
 .form-header {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
 }
 
 .form-header h2 {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: 700;
-  margin-bottom: var(--space-2);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
 }
 
 .form-header p {
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
   font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
 }
 
 /* Sections */
 .form-sections {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-2);
 }
 
 .form-section {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: border-color var(--duration-normal);
+  transition: all var(--duration-normal) var(--ease-out);
   background: var(--bg-secondary);
 }
 
 .form-section.open {
   border-color: var(--border-strong);
+  box-shadow: var(--shadow-card);
 }
 
 .form-section-header {
@@ -47,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-4) var(--space-5);
+  padding: 14px var(--space-5);
   background: transparent;
   border: none;
   color: var(--text-primary);
@@ -62,17 +65,23 @@
   background: var(--surface-glass);
 }
 
+.form-section-header svg:last-child {
+  color: var(--text-muted);
+}
+
 .form-section-left {
   display: flex;
   align-items: center;
   gap: var(--space-3);
 }
 
-.form-section-left svg {
-  color: var(--text-tertiary);
+.form-section-left svg:first-child {
+  color: var(--text-muted);
+  width: 16px;
+  height: 16px;
 }
 
-.form-section.open .form-section-left svg {
+.form-section.open .form-section-left svg:first-child {
   color: var(--accent-light);
 }
 
@@ -90,7 +99,7 @@
 
 .form-row {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 @media (max-width: 640px) {
@@ -134,20 +143,20 @@
 .form-bullets {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: 6px;
 }
 
 .bullet-row {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: 6px;
 }
 
 .bullet-marker {
   color: var(--accent-light);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   flex-shrink: 0;
-  width: 16px;
+  width: 14px;
   text-align: center;
 }
 

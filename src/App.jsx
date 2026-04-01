@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FileText, Key, Settings } from 'lucide-react';
+import { FileText, Key } from 'lucide-react';
 import Landing from './components/Landing';
 import StepIndicator from './components/StepIndicator';
 import ResumeForm from './components/ResumeForm';
@@ -8,6 +8,8 @@ import TemplateSelector from './components/TemplateSelector';
 import ResumePreview from './components/ResumePreview';
 import ExportPanel from './components/ExportPanel';
 import ApiKeyModal from './components/ApiKeyModal';
+import ThemeToggle from './components/ThemeToggle';
+import { getInitialTheme } from './components/ThemeToggle';
 import { emptyResumeData } from './utils/sampleData';
 import './App.css';
 
@@ -27,6 +29,11 @@ export default function App() {
   const [resumeData, setResumeData] = useState(() => loadSavedData() || emptyResumeData);
   const [selectedTemplate, setSelectedTemplate] = useState('modern');
   const [showApiKeyModal, setShowApiKeyModal] = useState(false);
+
+  // Set initial theme on mount
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', getInitialTheme());
+  }, []);
 
   // Auto-save to localStorage
   useEffect(() => {
@@ -57,12 +64,13 @@ export default function App() {
     <div className="app-builder">
       {/* Top Bar */}
       <header className="app-topbar">
-        <div className="app-topbar-inner container-wide">
+        <div className="app-topbar-inner">
           <button className="app-logo" onClick={() => setView('landing')}>
-            <FileText size={20} strokeWidth={1.5} />
+            <FileText size={18} strokeWidth={1.5} />
             <span>ResumeAI</span>
           </button>
           <div className="app-topbar-actions">
+            <ThemeToggle />
             <button className="btn btn-ghost btn-sm" onClick={() => setShowApiKeyModal(true)}>
               <Key size={14} /> API Key
             </button>
@@ -76,7 +84,7 @@ export default function App() {
       </div>
 
       {/* Step Content */}
-      <main className="app-content container-wide">
+      <main className="app-content">
         {step === 1 && (
           <ResumeForm
             data={resumeData}

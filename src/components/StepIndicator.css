@@ -1,10 +1,13 @@
-/* Step Indicator */
+/* ============================================
+   Step Indicator — v2 Minimal
+   ============================================ */
+
 .step-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0;
-  padding: var(--space-6) 0;
+  padding: var(--space-5) 0;
 }
 
 .step-indicator-item {
@@ -14,18 +17,18 @@
 }
 
 .step-dot {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--text-xs);
+  font-size: 11px;
   font-weight: 600;
   font-family: var(--font-sans);
-  border: 2px solid var(--border-strong);
+  border: 1.5px solid var(--border-strong);
   background: var(--bg-tertiary);
-  color: var(--text-tertiary);
+  color: var(--text-muted);
   cursor: pointer;
   transition: all var(--duration-normal) var(--ease-out);
   flex-shrink: 0;
@@ -33,7 +36,7 @@
 
 .step-dot:disabled {
   cursor: not-allowed;
-  opacity: 0.4;
+  opacity: 0.35;
 }
 
 .step-dot.active {
@@ -50,13 +53,14 @@
 }
 
 .step-label {
-  font-size: var(--text-xs);
+  font-size: 11px;
   font-weight: 500;
   color: var(--text-muted);
-  margin-left: var(--space-2);
-  margin-right: var(--space-2);
+  margin-left: 6px;
+  margin-right: 6px;
   white-space: nowrap;
   transition: color var(--duration-normal);
+  letter-spacing: 0.02em;
 }
 
 .step-label.active {
@@ -64,16 +68,17 @@
 }
 
 .step-label.completed {
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
 }
 
 .step-connector {
-  width: 40px;
-  height: 2px;
+  width: 36px;
+  height: 1.5px;
   background: var(--border-strong);
-  margin: 0 var(--space-1);
+  margin: 0 2px;
   flex-shrink: 0;
   transition: background var(--duration-normal);
+  border-radius: 1px;
 }
 
 .step-connector.completed {
@@ -84,8 +89,8 @@
   .step-label {
     display: none;
   }
-  
+
   .step-connector {
-    width: 24px;
+    width: 20px;
   }
 }

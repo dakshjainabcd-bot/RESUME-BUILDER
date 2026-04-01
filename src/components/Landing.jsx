@@ -1,50 +1,58 @@
-import { useState } from 'react';
 import { FileText, ArrowRight, Sparkles, Layout, Download, Zap, CheckCircle } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
+import { getInitialTheme } from './ThemeToggle';
+import { useEffect } from 'react';
 import './Landing.css';
 
 const features = [
   {
-    icon: <Sparkles size={20} />,
+    icon: <Sparkles size={18} />,
     title: 'AI-Powered Writing',
     desc: 'Transform plain text into polished, professional resume content instantly.',
   },
   {
-    icon: <Layout size={20} />,
+    icon: <Layout size={18} />,
     title: 'Premium Templates',
     desc: 'Choose from beautifully crafted templates optimized for ATS systems.',
   },
   {
-    icon: <Download size={20} />,
+    icon: <Download size={18} />,
     title: 'Export Anywhere',
     desc: 'Download your resume as PDF or DOCX, ready to submit.',
   },
   {
-    icon: <Zap size={20} />,
+    icon: <Zap size={18} />,
     title: 'Instant Preview',
     desc: 'See your resume take shape in real-time as you type.',
   },
 ];
 
 export default function Landing({ onGetStarted }) {
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', getInitialTheme());
+  }, []);
+
   return (
     <div className="landing">
       {/* Ambient background */}
       <div className="landing-bg">
         <div className="landing-orb landing-orb-1"></div>
         <div className="landing-orb landing-orb-2"></div>
-        <div className="landing-orb landing-orb-3"></div>
       </div>
 
       {/* Navbar */}
       <nav className="landing-nav">
         <div className="landing-nav-inner container">
           <div className="landing-logo">
-            <FileText size={22} strokeWidth={1.5} />
+            <FileText size={20} strokeWidth={1.5} />
             <span>ResumeAI</span>
           </div>
-          <button className="btn btn-primary btn-sm" onClick={onGetStarted}>
-            Get Started <ArrowRight size={14} />
-          </button>
+          <div className="landing-nav-actions">
+            <ThemeToggle />
+            <button className="btn btn-primary btn-sm" onClick={onGetStarted}>
+              Get Started <ArrowRight size={14} />
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -52,7 +60,7 @@ export default function Landing({ onGetStarted }) {
       <section className="landing-hero container">
         <div className="hero-content">
           <div className="badge animate-fade-in">
-            <Sparkles size={12} />
+            <Sparkles size={11} />
             AI-Powered Resume Builder
           </div>
           <h1 className="hero-title animate-fade-in-up">
@@ -65,7 +73,7 @@ export default function Landing({ onGetStarted }) {
           </p>
           <div className="hero-actions animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <button className="btn btn-primary btn-lg" onClick={onGetStarted}>
-              Create Your Resume <ArrowRight size={18} />
+              Create Your Resume <ArrowRight size={16} />
             </button>
             <button className="btn btn-ghost btn-lg" onClick={onGetStarted}>
               View Templates
@@ -73,15 +81,15 @@ export default function Landing({ onGetStarted }) {
           </div>
           <div className="hero-proof animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="hero-proof-item">
-              <CheckCircle size={14} />
+              <CheckCircle size={13} />
               <span>ATS Optimized</span>
             </div>
             <div className="hero-proof-item">
-              <CheckCircle size={14} />
+              <CheckCircle size={13} />
               <span>Free to Use</span>
             </div>
             <div className="hero-proof-item">
-              <CheckCircle size={14} />
+              <CheckCircle size={13} />
               <span>No Sign-up Required</span>
             </div>
           </div>

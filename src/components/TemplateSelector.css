@@ -1,11 +1,11 @@
 /* ============================================
-   Template Selector Styles
+   Template Selector Styles — v2 Premium Minimal
    ============================================ */
 
 .template-selector {
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: var(--space-4) 0;
+  padding: var(--space-2) 0;
 }
 
 .ts-header {
@@ -14,20 +14,21 @@
 }
 
 .ts-header h2 {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: 700;
-  margin-bottom: var(--space-2);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
 }
 
 .ts-header p {
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
   font-size: var(--text-sm);
 }
 
 .ts-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-5);
+  gap: var(--space-4);
   margin-bottom: var(--space-8);
 }
 
@@ -39,7 +40,7 @@
 
 .ts-card {
   background: var(--bg-secondary);
-  border: 2px solid var(--border);
+  border: 1.5px solid var(--border);
   border-radius: var(--radius-xl);
   padding: var(--space-4);
   cursor: pointer;
@@ -50,13 +51,13 @@
 
 .ts-card:hover {
   border-color: var(--border-strong);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .ts-card.selected {
   border-color: var(--accent);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-glow), var(--shadow-md);
 }
 
 .ts-preview-wrapper {
@@ -86,8 +87,8 @@
   position: absolute;
   top: var(--space-3);
   right: var(--space-3);
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: var(--accent);
   color: white;
@@ -99,10 +100,10 @@
 }
 
 .ts-info h3 {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: var(--space-1);
+  margin-bottom: 2px;
 }
 
 .ts-info p {
