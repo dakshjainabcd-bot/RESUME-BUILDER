@@ -9,7 +9,7 @@ export function getInitialTheme() {
     const saved = localStorage.getItem(THEME_KEY);
     if (saved) return saved;
   } catch {}
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  return 'light';
 }
 
 export default function ThemeToggle() {

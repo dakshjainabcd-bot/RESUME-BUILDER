@@ -9,6 +9,8 @@ import ResumePreview from './components/ResumePreview';
 import ExportPanel from './components/ExportPanel';
 import ApiKeyModal from './components/ApiKeyModal';
 import ThemeToggle from './components/ThemeToggle';
+import ChatBot from './components/ChatBot';
+import InsightsPage from './components/InsightsPage';
 import { getInitialTheme } from './components/ThemeToggle';
 import { emptyResumeData } from './utils/sampleData';
 import './App.css';
@@ -24,7 +26,7 @@ function loadSavedData() {
 }
 
 export default function App() {
-  const [view, setView] = useState('landing'); // 'landing' | 'builder'
+  const [view, setView] = useState('landing'); // 'landing' | 'builder' | 'insights'
   const [step, setStep] = useState(1);
   const [resumeData, setResumeData] = useState(() => loadSavedData() || emptyResumeData);
   const [selectedTemplate, setSelectedTemplate] = useState('modern');
@@ -49,11 +51,23 @@ export default function App() {
     if (s >= 1 && s <= 4) setStep(s);
   };
 
+  // Insights page
+  if (view === 'insights') {
+    return (
+      <>
+        <InsightsPage onBack={() => setView('landing')} />
+        <ChatBot onOpenApiKey={() => setShowApiKeyModal(true)} resumeData={resumeData} />
+        <ApiKeyModal isOpen={showApiKeyModal} onClose={() => setShowApiKeyModal(false)} />
+      </>
+    );
+  }
+
   // Landing page
   if (view === 'landing') {
     return (
       <>
-        <Landing onGetStarted={handleGetStarted} />
+        <Landing onGetStarted={handleGetStarted} onViewInsights={() => setView('insights')} />
+        <ChatBot onOpenApiKey={() => setShowApiKeyModal(true)} resumeData={resumeData} />
         <ApiKeyModal isOpen={showApiKeyModal} onClose={() => setShowApiKeyModal(false)} />
       </>
     );
@@ -128,6 +142,7 @@ export default function App() {
         )}
       </main>
 
+      <ChatBot onOpenApiKey={() => setShowApiKeyModal(true)} resumeData={resumeData} />
       <ApiKeyModal isOpen={showApiKeyModal} onClose={() => setShowApiKeyModal(false)} />
     </div>
   );

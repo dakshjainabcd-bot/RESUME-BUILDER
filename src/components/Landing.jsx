@@ -48,7 +48,16 @@ const testimonials = [
   },
 ];
 
-const companyNames = ['Google', 'Microsoft', 'Amazon', 'Meta', 'Apple', 'Netflix', 'Stripe', 'Spotify'];
+const companyLogos = [
+  { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
+  { name: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg' },
+  { name: 'Amazon', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg' },
+  { name: 'Meta', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg' },
+  { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' },
+  { name: 'Netflix', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg' },
+  { name: 'Stripe', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg' },
+  { name: 'Spotify', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg' },
+];
 
 // Animated counter hook
 function useCountUp(end, duration = 2000, startOnView = true) {
@@ -195,7 +204,7 @@ function SuccessGraph() {
   );
 }
 
-export default function Landing({ onGetStarted }) {
+export default function Landing({ onGetStarted, onViewInsights }) {
   const [count1, ref1] = useCountUp(12400, 2200);
   const [count2, ref2] = useCountUp(78, 1800);
   const [count3, ref3] = useCountUp(94, 2000);
@@ -209,6 +218,8 @@ export default function Landing({ onGetStarted }) {
     <div className="landing">
       {/* Ambient background */}
       <div className="landing-bg">
+        <div className="landing-grid"></div>
+        <div className="landing-scanner"></div>
         <div className="landing-orb landing-orb-1"></div>
         <div className="landing-orb landing-orb-2"></div>
       </div>
@@ -221,6 +232,9 @@ export default function Landing({ onGetStarted }) {
             <span>ResumeAI</span>
           </div>
           <div className="landing-nav-actions">
+            <button className="btn btn-ghost btn-sm" onClick={onGetStarted}>
+              View Templates
+            </button>
             <ThemeToggle />
             <button className="btn btn-primary btn-sm" onClick={onGetStarted}>
               Get Started <ArrowRight size={14} />
@@ -248,8 +262,8 @@ export default function Landing({ onGetStarted }) {
             <button className="btn btn-primary btn-lg" onClick={onGetStarted}>
               Create Your Resume <ArrowRight size={16} />
             </button>
-            <button className="btn btn-ghost btn-lg" onClick={onGetStarted}>
-              View Templates
+            <button className="btn btn-ghost btn-lg" onClick={onViewInsights}>
+              Resume Insights
             </button>
           </div>
           <div className="hero-proof animate-fade-in" style={{ animationDelay: '0.4s' }}>
@@ -273,9 +287,13 @@ export default function Landing({ onGetStarted }) {
       <section className="landing-trusted container">
         <p className="trusted-label">Trusted by professionals hired at</p>
         <div className="trusted-logos">
-          {companyNames.map((name) => (
-            <div key={name} className="trusted-logo-item">
-              <span>{name}</span>
+          {companyLogos.map((company) => (
+            <div key={company.name} className="trusted-logo-item" title={company.name}>
+              <img 
+                src={company.logo} 
+                alt={`${company.name} logo`} 
+                className="trusted-logo-img"
+              />
             </div>
           ))}
         </div>
