@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FileText, Key } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import Landing from './components/Landing';
 import StepIndicator from './components/StepIndicator';
 import ResumeForm from './components/ResumeForm';
@@ -58,6 +59,7 @@ export default function App() {
         <InsightsPage onBack={() => setView('landing')} />
         <ChatBot onOpenApiKey={() => setShowApiKeyModal(true)} resumeData={resumeData} />
         <ApiKeyModal isOpen={showApiKeyModal} onClose={() => setShowApiKeyModal(false)} />
+        <Analytics />
       </>
     );
   }
@@ -69,6 +71,7 @@ export default function App() {
         <Landing onGetStarted={handleGetStarted} onViewInsights={() => setView('insights')} />
         <ChatBot onOpenApiKey={() => setShowApiKeyModal(true)} resumeData={resumeData} />
         <ApiKeyModal isOpen={showApiKeyModal} onClose={() => setShowApiKeyModal(false)} />
+        <Analytics />
       </>
     );
   }
@@ -144,6 +147,7 @@ export default function App() {
 
       <ChatBot onOpenApiKey={() => setShowApiKeyModal(true)} resumeData={resumeData} />
       <ApiKeyModal isOpen={showApiKeyModal} onClose={() => setShowApiKeyModal(false)} />
+      <Analytics />
     </div>
   );
 }
